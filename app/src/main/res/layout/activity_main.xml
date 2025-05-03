@@ -8,35 +8,18 @@
     android:background="#CDDC39"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.compose.myapp.MainActivity">
 
     <com.google.android.material.textfield.MaterialAutoCompleteTextView
         android:id="@+id/autoTextView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:completionHintView="@style/Platform.MaterialComponents.Light"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:drawableEnd="@drawable/ic_drop_down"
         android:hint="Please type language..."
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.183"
-        tools:ignore="HardcodedText,VisualLintTextFieldSize" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autoTextView"
-        app:layout_constraintVertical_bias="0.824"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText,MissingConstraints,VisualLintTextFieldSize"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="150dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
