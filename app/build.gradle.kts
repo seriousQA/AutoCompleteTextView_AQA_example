@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("kotlin-android")
     id("com.google.relay") version "0.3.12"
+    id("kotlin-kapt")
 }
 
 android {
@@ -21,7 +22,6 @@ android {
             useSupportLibrary = true
         }
     }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -30,6 +30,10 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -83,4 +87,5 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.ui.test.manifest)
     androidTestImplementation("androidx.test.uiautomator:uiautomator:3.8.0")
+    kapt("com.android.databinding:compiler:3.1.4")
 }
